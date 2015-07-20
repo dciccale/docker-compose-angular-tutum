@@ -1,0 +1,12 @@
+mongo:
+  image: 'mongo:latest'
+  autorestart: always
+  ports:
+    - '27017:27017'
+web:
+  image: 'dciccale/docker-compose-angular-tutum:latest'
+  autorestart: always
+  links:
+    - 'mongo:mongo'
+  ports:
+    - '80:8080'

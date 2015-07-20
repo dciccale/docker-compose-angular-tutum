@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible", content="IE=edge,chrome=1">
+    <meta name="viewport", content="width=device-width, initial-scale=1.0">
+
+    <!-- enable html5mode routes -->
+    <base href="/">
+
+    <title>Docker, AngularJS, Tutum</title>
+
+    <!-- inject:vendor:css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="app/app.css">
+    <link rel="stylesheet" href="app/main/main.css">
+    <!-- endinject -->
+  </head>
+
+  <body ng-app="app">
+
+    <div ui-view></div>
+
+    <!-- inject:vendor:js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <!-- endbower -->
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <script src="app/app.js"></script>
+    <script src="app/about/about.js"></script>
+    <script src="app/main/main-controller.js"></script>
+    <script src="app/main/main.js"></script>
+    <script src="components/input-focus/input-focus.js"></script>
+    <!-- endinject -->
+
+  </body>
+</html>

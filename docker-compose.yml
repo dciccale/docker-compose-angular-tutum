@@ -1,0 +1,13 @@
+web:
+  build: .
+  ports:
+    - "80:8080"
+  environment:
+    NODE_ENV: production
+  links:
+    - mongo
+mongo:
+  image: mongo
+  command: --smallfiles
+  ports:
+    - "27017:27017"

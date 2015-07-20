@@ -1,0 +1,39 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container main">
+  <h1>Fruit</h1>
+
+  <form class="form-inline form-add" ng-submit="add()">
+    <input ng-model="newItem.name" name="name" placeholder="Enter fruit name" class="form-control" required ng-disabled="saving">
+    <button class="btn btn-default" ng-disabled="saving" ng-bind="saving ? 'Saving...' : 'Add'"></button>
+  </form>
+
+  <p>Double click the name of the fruit to edit</p>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="fruit in fruit">
+            <td>{{$index}}</td>
+            <td ng-dblclick="startEdit(fruit); isEditing = !isEditing;" class="td-name">
+              <span ng-hide="isEditing">{{fruit.name}}</span>
+              <form ng-submit="update(fruit, 'submit'); isEditing = false" ng-show="isEditing" class="form-inline">
+                <input ng-model="fruit.name" ng-blur="update(fruit, 'blur'); isEditing = false" input-focus="isEditing" class="form-control input-sm" required>
+              </form>
+            </td>
+            <td>
+              <a href class="btn btn-xs btn-danger" ng-click="remove(fruit._id)">&times;</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

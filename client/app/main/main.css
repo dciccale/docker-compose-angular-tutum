@@ -1,0 +1,16 @@
+.main .form-add {
+  margin-bottom: 20px;
+}
+
+.main td {
+  user-select: none;
+}
+
+.main td {
+  width: 80px;
+}
+
+.main .td-name {
+  height: 50px;
+  width: 400px;
+}
