@@ -12,5 +12,6 @@ module.exports = {
     uri: 'mongodb://' + MONGO_ADDR + ':' + MONGO_PORT + '/docker-angular-tutum-dev'
   },
 
+  // If true, sample data will be feed into the database, removing all previous one
   seedDB: true
 };

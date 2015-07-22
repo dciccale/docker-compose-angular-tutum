@@ -18,6 +18,7 @@ module.exports = {
     uri: 'mongodb://' + MONGO_ADDR + ':' + MONGO_PORT + '/docker-angular-tutum'
   },
 
+  // In production our secret will be defined in a environment variable on the server
   secrets: {
     session: process.env.SESSION_SECRET
   }
