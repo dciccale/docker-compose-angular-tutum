@@ -19,4 +19,4 @@ RUN \
 EXPOSE 8080
 
 # The command to run our app when the container is run
-CMD ["npm", "start-prod"]
+CMD ["npm", "run", "start-prod"]
